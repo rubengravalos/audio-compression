@@ -1,0 +1,46 @@
+model3L10B16MB.dat
+  input dimension: 1
+  hidden dimension: 256
+  output dimension: 256
+  number of LSTM layers: 3
+  number of epochs: 10
+  batch size: 16
+  x_test: (100, 8000, 1) (uint8)
+  x_dev: (100, 8000, 1) (uint8)
+  x_train: (15985, 8000, 1) (uint8)
+Net(
+  (lstm): LSTM(1, 256, num_layers=3, batch_first=True, dropout=0.5)
+  (fc): Linear(in_features=256, out_features=256, bias=True)
+  (J): CrossEntropyLoss()
+)
+# param:    1383680
+it 1/10, Jtr = 0.000252, time: 1451.25s
+    Jdev = 0.000348
+
+it 1/10, Jtr = 0.000477, time: 1440.85s
+    Jdev = 0.000687
+
+it 1/10, Jtr = 0.000697, time: 1455.25s
+    Jdev = 0.001035
+
+it 1/10, Jtr = 0.000914, time: 1440.19s
+    Jdev = 0.001356
+
+it 1/10, Jtr = 0.001126, time: 1434.35s
+    Jdev = 0.001674
+
+it 1/10, Jtr = 0.001339, time: 1452.99s
+    Jdev = 0.002014
+
+it 1/10, Jtr = 0.001550, time: 1455.98s
+    Jdev = 0.002357
+
+it 1/10, Jtr = 0.001757, time: 1451.02s
+    Jdev = 0.002667
+
+it 1/10, Jtr = 0.001961, time: 1433.69s
+    Jdev = 0.002974
+
+it 1/10, Jtr = 0.002162, time: 1435.73s
+    Jdev = 0.003276
+

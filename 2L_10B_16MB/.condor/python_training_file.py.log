@@ -1,0 +1,32 @@
+  input dimension: 1
+  hidden dimension: 256
+  output dimension: 256
+  number of LSTM layers: 2
+  number of epochs: 10
+  batch size: 16
+Random seed =  2
+  x_test: (100, 8000, 1) (uint8)
+  x_dev: (100, 8000, 1) (uint8)
+  x_train: (15985, 8000, 1) (uint8)
+Net(
+  (lstm): LSTM(1, 256, num_layers=2, batch_first=True, dropout=0.5)
+  (fc): Linear(in_features=256, out_features=256, bias=True)
+  (J): CrossEntropyLoss()
+)
+# param:    857344
+  input dimension: 1
+  hidden dimension: 256
+  output dimension: 256
+  number of LSTM layers: 2
+  number of epochs: 10
+  batch size: 16
+Random seed =  3
+  x_test: (100, 8000, 1) (uint8)
+  x_dev: (100, 8000, 1) (uint8)
+  x_train: (15985, 8000, 1) (uint8)
+Net(
+  (lstm): LSTM(1, 256, num_layers=2, batch_first=True, dropout=0.5)
+  (fc): Linear(in_features=256, out_features=256, bias=True)
+  (J): CrossEntropyLoss()
+)
+# param:    857344

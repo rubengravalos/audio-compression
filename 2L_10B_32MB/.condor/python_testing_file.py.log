@@ -1,0 +1,20 @@
+model_2L_10B_32MB_R3.dat
+  input dimension: 1
+  hidden dimension: 256
+  output dimension: 256
+  number of LSTM layers: 2
+  number of epochs: 10
+  batch size: 32
+N muestras/señal:  8000
+N señales:  16185
+Random seed =  3
+Boolean para indicar que el modelo ESTÁ en CUDA: True
+CUDA available: True
+CUDA initialized: True
+Net(
+  (lstm): LSTM(1, 256, num_layers=2, batch_first=True, dropout=0.5)
+  (fc): Linear(in_features=256, out_features=256, bias=True)
+  (J): CrossEntropyLoss()
+)
+Compression rate average:  1.0593157327255134
+Tiempo de codificación:  05:25:34  [hh:mm:ss]

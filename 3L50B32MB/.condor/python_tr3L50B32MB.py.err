@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "tr3L50B32MB.py", line 190, in <module>
+    out = model(x)
+  File "/home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "tr3L50B32MB.py", line 133, in forward
+    x = self.fc(x)
+  File "/home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/nn/functional.py", line 1612, in linear
+    output = input.matmul(weight.t())
+RuntimeError: CUDA out of memory. Tried to allocate 250.00 MiB (GPU 0; 7.93 GiB total capacity; 4.66 GiB already allocated; 231.44 MiB free; 4.69 GiB reserved in total by PyTorch)

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "tr3L100B32MB.py", line 192, in <module>
+    loss = model.loss(out, y.long())
+  File "tr3L100B32MB.py", line 138, in loss
+    return self.J(out.reshape(n*t,-1), y.reshape(n*t,))
+  File "/home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/nn/modules/loss.py", line 932, in forward
+    ignore_index=self.ignore_index, reduction=self.reduction)
+  File "/home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/nn/functional.py", line 2317, in cross_entropy
+    return nll_loss(log_softmax(input, 1), target, weight, None, ignore_index, None, reduction)
+  File "/home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/nn/functional.py", line 1535, in log_softmax
+    ret = input.log_softmax(dim)
+RuntimeError: CUDA out of memory. Tried to allocate 250.00 MiB (GPU 0; 5.80 GiB total capacity; 4.91 GiB already allocated; 200.56 MiB free; 4.93 GiB reserved in total by PyTorch)
