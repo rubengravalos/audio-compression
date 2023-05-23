@@ -1,0 +1,8 @@
+condor_*
+python_*
+__pycache__
+*.py.*
+*.clog
+*.err
+*.log
+*.sub
