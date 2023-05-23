@@ -27,7 +27,7 @@ from IPython.display import Audio
 # Parameter definition
 # -----------------------
 
-seed = None
+seed = 0
 
 if seed != None:
     model_name = 'model3L10B32MBR'+str(seed)+'.dat'
@@ -58,7 +58,7 @@ print('  batch size: %d' % batch_size)
 # -----------------------------------------------------------------------------
 
 
-with open('/home/alumnos/alumno3/work/TFM/experimento2capas/speech.pkl','rb') as f:
+with open('/home/alumnos/alumno3/work/TFM/data/speech.pkl','rb') as f:
     x = pickle.load(f)
 
 #print(x.shape)

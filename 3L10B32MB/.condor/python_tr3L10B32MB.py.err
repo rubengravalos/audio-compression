@@ -1,0 +1,37 @@
+Traceback (most recent call last):
+  File "tr3L10B32MB.py", line 193, in <module>
+    loss.backward()
+  File "/home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/tensor.py", line 198, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/autograd/__init__.py", line 100, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+RuntimeError: CUDA out of memory. Tried to allocate 250.00 MiB (GPU 0; 5.93 GiB total capacity; 5.39 GiB already allocated; 93.88 MiB free; 5.42 GiB reserved in total by PyTorch) (malloc at /opt/conda/conda-bld/pytorch_1591914880026/work/c10/cuda/CUDACachingAllocator.cpp:289)
+frame #0: c10::Error::Error(c10::SourceLocation, std::string const&) + 0x4e (0x146ee12f2b5e in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x1f39d (0x146ee153e39d in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libc10_cuda.so)
+frame #2: <unknown function> + 0x2058e (0x146ee153f58e in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libc10_cuda.so)
+frame #3: at::native::empty_cuda(c10::ArrayRef<long>, c10::TensorOptions const&, c10::optional<c10::MemoryFormat>) + 0x291 (0x146ee426cdc1 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdd452b (0x146ee252052b in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: <unknown function> + 0xe1de17 (0x146ee2569e17 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdd2339 (0x146f096d4339 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: <unknown function> + 0xdd2677 (0x146f096d4677 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: <unknown function> + 0xb7e60e (0x146f0948060e in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: at::native::empty_like(at::Tensor const&, c10::TensorOptions const&, c10::optional<c10::MemoryFormat>) + 0x9e0 (0x146f09486f00 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #10: <unknown function> + 0xe912d1 (0x146f097932d1 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #11: <unknown function> + 0xee45d3 (0x146f097e65d3 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: <unknown function> + 0x2a1d7d2 (0x146ee41697d2 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cuda.so)
+frame #13: at::Tensor at::native::(anonymous namespace)::host_softmax_backward<at::native::(anonymous namespace)::LogSoftMaxBackwardEpilogue, true>(at::Tensor const&, at::Tensor const&, long, bool) + 0x163 (0x146ee419a483 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cuda.so)
+frame #14: at::native::log_softmax_backward_cuda(at::Tensor const&, at::Tensor const&, long, at::Tensor const&) + 0x99 (0x146ee4169fb9 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cuda.so)
+frame #15: <unknown function> + 0xddf1b0 (0x146ee252b1b0 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cuda.so)
+frame #16: <unknown function> + 0xe22a86 (0x146f09724a86 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x2a07e6c (0x146f0b309e6c in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: <unknown function> + 0xe22a86 (0x146f09724a86 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: torch::autograd::generated::LogSoftmaxBackward::apply(std::vector<at::Tensor, std::allocator<at::Tensor> >&&) + 0x1c9 (0x146f0af05f49 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #20: <unknown function> + 0x2ae7df5 (0x146f0b3e9df5 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #21: torch::autograd::Engine::evaluate_function(std::shared_ptr<torch::autograd::GraphTask>&, torch::autograd::Node*, torch::autograd::InputBuffer&) + 0x16f3 (0x146f0b3e70f3 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #22: torch::autograd::Engine::thread_main(std::shared_ptr<torch::autograd::GraphTask> const&, bool) + 0x3d2 (0x146f0b3e7ed2 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #23: torch::autograd::Engine::thread_init(int) + 0x39 (0x146f0b3e0549 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_cpu.so)
+frame #24: torch::autograd::python::PythonEngine::thread_init(int) + 0x38 (0x146f0e930638 in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/libtorch_python.so)
+frame #25: <unknown function> + 0xc819d (0x146f1118b19d in /home/alumnos/alumno1/software/miniconda3/lib/python3.7/site-packages/torch/lib/../../../.././libstdc++.so.6)
+frame #26: <unknown function> + 0x76ba (0x146f294496ba in /lib/x86_64-linux-gnu/libpthread.so.0)
+frame #27: clone + 0x6d (0x146f2917f41d in /lib/x86_64-linux-gnu/libc.so.6)
+

@@ -56,7 +56,7 @@ print('  batch size: %d' % batch_size)
 # -----------------------------------------------------------------------------
 
 
-with open('/home/alumnos/alumno3/work/TFM/experimento2capas/speech.pkl','rb') as f:
+with open('/home/alumnos/alumno3/work/TFM/data/speech.pkl','rb') as f:
     x = pickle.load(f)
 
 #print(x.shape)

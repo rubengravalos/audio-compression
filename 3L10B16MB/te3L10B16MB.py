@@ -11,7 +11,7 @@ import random
 import operator
 
 from IPython.display import Audio
-from training_file import Net
+from tr3L10B16MB import Net
 
 
 """
@@ -21,9 +21,9 @@ Parameter definition
 seed = None
 
 if seed != None:
-    model_name = 'model_2L_100B_32MB_R'+str(seed)+'.dat'
+    model_name = 'model3L10B16MB_R'+str(seed)+'.dat'
 else:
-    model_name = '3L10B16MB.dat'
+    model_name = 'model3L10B16MB.dat'
 
 print (model_name)
 
@@ -41,7 +41,7 @@ print('  number of LSTM layers: %d' % nb_lstm_layers)
 print('  number of epochs: %d' % nb_epochs)
 print('  batch size: %d' % batch_size)
 
-with open('/home/alumnos/alumno3/work/TFM/experimento2capas/speech.pkl','rb') as f:
+with open('/home/alumnos/alumno3/work/TFM/data/speech.pkl','rb') as f:
     x = pickle.load(f)
 
 T = len(x[0])

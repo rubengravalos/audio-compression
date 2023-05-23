@@ -41,7 +41,7 @@ print('  number of LSTM layers: %d' % nb_lstm_layers)
 print('  number of epochs: %d' % nb_epochs)
 print('  batch size: %d' % batch_size)
 
-with open('/home/alumnos/alumno3/work/TFM/experimento2capas/speech.pkl','rb') as f:
+with open('/home/alumnos/alumno3/work/TFM/data/speech.pkl','rb') as f:
     x = pickle.load(f)
 
 T = len(x[0])

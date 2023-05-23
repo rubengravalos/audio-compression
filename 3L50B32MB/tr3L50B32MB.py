@@ -30,9 +30,9 @@ from IPython.display import Audio
 seed = None
 
 if seed != None:
-    model_name = 'model3L50B32MBR'+str(seed)+'.dat'
+    model_name = 'model3L50B16MBR'+str(seed)+'.dat'
 else:
-    model_name = 'model3L50B32MB.dat'
+    model_name = 'model3L50B16MB.dat'
 
 print(model_name)
 
@@ -41,7 +41,7 @@ output_dim = 256
 hidden_dim = 256
 nb_lstm_layers = 3
 nb_epochs = 50
-batch_size = 32
+batch_size = 16
 
 print('  input dimension: %d' % input_dim)
 print('  hidden dimension: %d' % hidden_dim)
@@ -58,7 +58,7 @@ print('  batch size: %d' % batch_size)
 # -----------------------------------------------------------------------------
 
 
-with open('/home/alumnos/alumno3/work/TFM/experimento2capas/speech.pkl','rb') as f:
+with open('/home/alumnos/alumno3/work/TFM/data/speech.pkl','rb') as f:
     x = pickle.load(f)
 
 #print(x.shape)
@@ -127,8 +127,8 @@ class Net(nn.Module):
         self.J = nn.CrossEntropyLoss()
 
     def forward(self, x):
-        #x = x.float()
-        x = x.to(torch.float32)
+        x = x.float()
+        #x = x.to(torch.float32)
         x, state = self.lstm(x)
         x = self.fc(x)
         return x

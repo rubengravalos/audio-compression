@@ -1,10 +1,11 @@
-model3L10B32MB.dat
+model3L10B32MBR0.dat
   input dimension: 1
   hidden dimension: 256
   output dimension: 256
   number of LSTM layers: 3
   number of epochs: 10
   batch size: 32
+Random seed =  0
   x_test: (100, 8000, 1) (uint8)
   x_dev: (100, 8000, 1) (uint8)
   x_train: (15985, 8000, 1) (uint8)
@@ -14,33 +15,3 @@ Net(
   (J): CrossEntropyLoss()
 )
 # param:    1383680
-it 1/10, Jtr = 0.000069, time: 1148.29s
-    Jdev = 0.000367
-
-it 1/10, Jtr = 0.000127, time: 1112.64s
-    Jdev = 0.000709
-
-it 1/10, Jtr = 0.000182, time: 1117.68s
-    Jdev = 0.001035
-
-it 1/10, Jtr = 0.000235, time: 1105.41s
-    Jdev = 0.001361
-
-it 1/10, Jtr = 0.000288, time: 1111.67s
-    Jdev = 0.001694
-
-it 1/10, Jtr = 0.000340, time: 1158.85s
-    Jdev = 0.002006
-
-it 1/10, Jtr = 0.000393, time: 1129.48s
-    Jdev = 0.002316
-
-it 1/10, Jtr = 0.000466, time: 1161.61s
-    Jdev = 0.002838
-
-it 1/10, Jtr = 0.000543, time: 1132.97s
-    Jdev = 0.003335
-
-it 1/10, Jtr = 0.000617, time: 1113.67s
-    Jdev = 0.003842
-
