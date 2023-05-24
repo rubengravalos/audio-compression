@@ -27,7 +27,7 @@ from IPython.display import Audio
 # Parameter definition
 # -----------------------
 
-seed = None
+seed = 0
 
 if seed != None:
     model_name = 'model3L50B16MBR'+str(seed)+'.dat'
@@ -166,7 +166,7 @@ scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
 # -----------------
 
 
-trainloader = data.DataLoader(x_train, batch_size=batch_size, shuffle=True, num_workers=0)
+trainloader = data.DataLoader(x_train, batch_size=batch_size, shuffle=False, num_workers=0)
 devloader = data.DataLoader(x_dev, batch_size=1, shuffle=False, num_workers=0)
 
 loss_train = np.zeros(nb_epochs)
@@ -180,7 +180,6 @@ for i in range(nb_epochs):
     # ---- W
     tic = time.time()
     model.train()
-    i=1
     for x in trainloader:
         x = x.cuda()
         y = x[:,1:]      # value to predict
@@ -197,7 +196,7 @@ for i in range(nb_epochs):
     toc = time.time()
 
     # ---- print
-    print("it %d/%d, Jtr = %f, time: %.2fs" % (i, nb_epochs, loss_train[i], toc - tic))
+    print("it %d/%d, Jtr = %f, time: %s" % (i, nb_epochs, loss_train[i], time.strftime("%H:%M:%S", time.gmtime(toc-tic))))
 
     # ---- dev
     model.eval()

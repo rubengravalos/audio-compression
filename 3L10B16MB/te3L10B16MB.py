@@ -18,10 +18,10 @@ from tr3L10B16MB import Net
 Parameter definition
 """
 
-seed = None
+seed = 0
 
 if seed != None:
-    model_name = 'model3L10B16MB_R'+str(seed)+'.dat'
+    model_name = 'model3L10B16MBR'+str(seed)+'.dat'
 else:
     model_name = 'model3L10B16MB.dat'
 
