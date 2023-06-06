@@ -18,12 +18,12 @@ from tr3L50B32MB import Net
 Parameter definition
 """
 
-seed = None
+seed = 2
 
 if seed != None:
-    model_name = 'model3L50B_32MB_R'+str(seed)+'.dat'
+    model_name = 'model3L50B16MBR'+str(seed)+'.dat'
 else:
-    model_name = '3L50B32MB.dat'
+    model_name = 'model3L50B16MB.dat'
 
 print (model_name)
 
@@ -32,7 +32,7 @@ output_dim = 256
 hidden_dim = 256
 nb_lstm_layers = 3
 nb_epochs = 50
-batch_size = 32
+batch_size = 16
 
 print('  input dimension: %d' % input_dim)
 print('  hidden dimension: %d' % hidden_dim)

@@ -18,12 +18,12 @@ from tr3L100B32MB import Net
 Parameter definition
 """
 
-seed = None
+seed = 2
 
 if seed != None:
-    model_name = 'model3L50B_32MB_R'+str(seed)+'.dat'
+    model_name = 'model3L100B16MBR'+str(seed)+'.dat'
 else:
-    model_name = '3L50B32MB.dat'
+    model_name = 'model3L100B16MB.dat'
 
 print (model_name)
 
@@ -31,8 +31,8 @@ input_dim = 1
 output_dim = 256
 hidden_dim = 256
 nb_lstm_layers = 3
-nb_epochs = 50
-batch_size = 32
+nb_epochs = 100
+batch_size = 16
 
 print('  input dimension: %d' % input_dim)
 print('  hidden dimension: %d' % hidden_dim)
@@ -286,7 +286,7 @@ class CodDecod(object):
     """
     return compression_rate
 
-x_true = torch.FloatTensor( x_test )
+x_true = torch.FloatTensor( x_test[:10] )
 
 """plt.plot(x_true[:1,:,:1])
 plt.title("Test signal shape")
@@ -296,14 +296,21 @@ plt.savefig('test_shape.png')"""
 x_t0 = torch.FloatTensor([[[1]]])
 symbols = [i for i in range (output_dim)]
 rate = 0
+ctime = 0
+dtime = 0
 
 model.eval()
 tic = time.time()
 for i in range(len(x_true)):
     #print("Signal " + str(i))
+    ticc = time.time()
     CoderDecoder = CodDecod(x_true[i:i+1], x_t0, symbols, model)
     message_encoded = CoderDecoder.Code()
+    tacc = time.time()
     message_decoded = CoderDecoder.Decode(message_encoded)
+    tocc = time.time()
+    ctime += (tacc-ticc)/len(x_true)
+    dtime += (tocc-tacc)/len(x_true)
     #CoderDecoder.Check(message_decoded)
     rate += (CoderDecoder.DataCompressionRate(message_encoded, output_dim))/len(x_true)
 
@@ -311,4 +318,6 @@ tac = time.time()
 tiempo_codificacion = time.strftime("%H:%M:%S", time.gmtime(tac-tic))
 
 print("Compression rate average: ", rate)
-print("Tiempo de codificación: ", tiempo_codificacion, " [hh:mm:ss]")
+print("Tiempo de codificación total: ", tiempo_codificacion, " [hh:mm:ss]")
+print("Tiempo medio de codificación: ", ctime, "s")
+print("Tiempo medio de decodificación: ", dtime, "s")

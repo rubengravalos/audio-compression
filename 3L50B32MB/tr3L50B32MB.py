@@ -11,7 +11,7 @@ import torch.nn as nn
 import matplotlib
 matplotlib.use('Agg')
 import torch
-
+"""
 import random
 import time
 import matplotlib.pyplot as plt
@@ -27,7 +27,7 @@ from IPython.display import Audio
 # Parameter definition
 # -----------------------
 
-seed = 0
+seed = 2
 
 if seed != None:
     model_name = 'model3L50B16MBR'+str(seed)+'.dat'
@@ -113,7 +113,7 @@ print('  x_dev: %s (%s)' % (x_dev.shape, x_dev.dtype))
 print('  x_train: %s (%s)' % (x_train.shape, x_train.dtype))
 #print('  x_dev_aux: %s (%s)' % (x_dev_aux.shape, x_dev_aux.dtype))
 #print('  x_train_aux: %s (%s)' % (x_train_aux.shape, x_train_aux.dtype))
-
+"""
 
 # -------------
 # Net
@@ -143,7 +143,7 @@ class Net(nn.Module):
         x = self.fc(x)
         return x.softmax(-1), state
 
-
+"""
 model = Net(input_dim, hidden_dim, output_dim, nb_lstm_layers)
 model.cuda()
 nb_param = sum(p.numel() for p in model.parameters())
@@ -237,3 +237,4 @@ torch.save( model, model_name)
 # ---------------------------------------------
 # Test the model by running "testing_file.py"
 # ---------------------------------------------
+"""

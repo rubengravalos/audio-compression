@@ -1,0 +1,334 @@
+model3L50B16MBR1.dat
+  input dimension: 1
+  hidden dimension: 256
+  output dimension: 256
+  number of LSTM layers: 3
+  number of epochs: 50
+  batch size: 16
+Random seed =  1
+  x_test: (100, 8000, 1) (uint8)
+  x_dev: (100, 8000, 1) (uint8)
+  x_train: (15985, 8000, 1) (uint8)
+Net(
+  (lstm): LSTM(1, 256, num_layers=3, batch_first=True, dropout=0.5)
+  (fc): Linear(in_features=256, out_features=256, bias=True)
+  (J): CrossEntropyLoss()
+)
+# param:    1383680
+it 0/50, Jtr = 0.000295, time: 00:25:26
+    Jdev = 0.000412
+
+it 1/50, Jtr = 0.000273, time: 00:25:32
+    Jdev = 0.000404
+
+it 2/50, Jtr = 0.000246, time: 00:25:31
+    Jdev = 0.000382
+
+it 3/50, Jtr = 0.000238, time: 00:25:26
+    Jdev = 0.000374
+
+it 4/50, Jtr = 0.000233, time: 00:25:34
+    Jdev = 0.000371
+
+it 5/50, Jtr = 0.000231, time: 00:25:39
+    Jdev = 0.000378
+
+it 6/50, Jtr = 0.000228, time: 00:25:40
+    Jdev = 0.000369
+
+it 7/50, Jtr = 0.000226, time: 00:25:39
+    Jdev = 0.000357
+
+it 8/50, Jtr = 0.000224, time: 00:25:40
+    Jdev = 0.000367
+
+it 9/50, Jtr = 0.000222, time: 00:25:40
+    Jdev = 0.000359
+
+it 10/50, Jtr = 0.000221, time: 00:25:35
+    Jdev = 0.000366
+
+it 11/50, Jtr = 0.000220, time: 00:25:25
+    Jdev = 0.000352
+
+it 12/50, Jtr = 0.000219, time: 00:25:28
+    Jdev = 0.000358
+
+it 13/50, Jtr = 0.000225, time: 00:25:39
+    Jdev = 0.000357
+
+it 14/50, Jtr = 0.000222, time: 00:25:33
+    Jdev = 0.000352
+
+it 15/50, Jtr = 0.000220, time: 00:25:33
+    Jdev = 0.000358
+
+it 16/50, Jtr = 0.000218, time: 00:25:25
+    Jdev = 0.000366
+
+it 17/50, Jtr = 0.000218, time: 00:25:24
+    Jdev = 0.000356
+
+it 18/50, Jtr = 0.000222, time: 00:25:25
+    Jdev = 0.000351
+
+it 19/50, Jtr = 0.000217, time: 00:25:25
+    Jdev = 0.000346
+
+it 20/50, Jtr = 0.000217, time: 00:25:25
+    Jdev = 0.000401
+
+it 21/50, Jtr = 0.000224, time: 00:25:25
+    Jdev = 0.000351
+
+it 22/50, Jtr = 0.000219, time: 00:25:25
+    Jdev = 0.000350
+
+it 23/50, Jtr = 0.000224, time: 00:25:25
+    Jdev = 0.000362
+
+it 24/50, Jtr = 0.000219, time: 00:25:25
+    Jdev = 0.000350
+
+it 25/50, Jtr = 0.000217, time: 00:25:25
+    Jdev = 0.000362
+
+it 26/50, Jtr = 0.000217, time: 00:25:25
+    Jdev = 0.000360
+
+it 27/50, Jtr = 0.000216, time: 00:25:26
+    Jdev = 0.000355
+
+it 28/50, Jtr = 0.000216, time: 00:25:25
+    Jdev = 0.000352
+
+it 29/50, Jtr = 0.000218, time: 00:25:25
+    Jdev = 0.000359
+
+it 30/50, Jtr = 0.000218, time: 00:25:25
+    Jdev = 0.000343
+
+it 31/50, Jtr = 0.000215, time: 00:25:25
+    Jdev = 0.000340
+
+it 32/50, Jtr = 0.000214, time: 00:25:26
+    Jdev = 0.000338
+
+it 33/50, Jtr = 0.000213, time: 00:25:25
+    Jdev = 0.000337
+
+it 34/50, Jtr = 0.000213, time: 00:25:25
+    Jdev = 0.000336
+
+it 35/50, Jtr = 0.000212, time: 00:25:24
+    Jdev = 0.000336
+
+it 36/50, Jtr = 0.000212, time: 00:25:24
+    Jdev = 0.000335
+
+it 37/50, Jtr = 0.000211, time: 00:25:24
+    Jdev = 0.000334
+
+it 38/50, Jtr = 0.000211, time: 00:25:25
+    Jdev = 0.000333
+
+it 39/50, Jtr = 0.000211, time: 00:25:25
+    Jdev = 0.000333
+
+it 40/50, Jtr = 0.000210, time: 00:25:24
+    Jdev = 0.000332
+
+it 41/50, Jtr = 0.000210, time: 00:25:24
+    Jdev = 0.000331
+
+it 42/50, Jtr = 0.000210, time: 00:25:31
+    Jdev = 0.000331
+
+it 43/50, Jtr = 0.000209, time: 00:28:14
+    Jdev = 0.000330
+
+it 44/50, Jtr = 0.000209, time: 00:28:22
+    Jdev = 0.000330
+
+it 45/50, Jtr = 0.000209, time: 00:27:21
+    Jdev = 0.000329
+
+it 46/50, Jtr = 0.000208, time: 00:27:56
+    Jdev = 0.000328
+
+it 47/50, Jtr = 0.000208, time: 00:28:01
+    Jdev = 0.000329
+
+it 48/50, Jtr = 0.000208, time: 00:27:55
+    Jdev = 0.000331
+
+it 49/50, Jtr = 0.000207, time: 00:27:57
+    Jdev = 0.000327
+
+model3L50B16MBR2.dat
+  input dimension: 1
+  hidden dimension: 256
+  output dimension: 256
+  number of LSTM layers: 3
+  number of epochs: 50
+  batch size: 16
+Random seed =  2
+  x_test: (100, 8000, 1) (uint8)
+  x_dev: (100, 8000, 1) (uint8)
+  x_train: (15985, 8000, 1) (uint8)
+Net(
+  (lstm): LSTM(1, 256, num_layers=3, batch_first=True, dropout=0.5)
+  (fc): Linear(in_features=256, out_features=256, bias=True)
+  (J): CrossEntropyLoss()
+)
+# param:    1383680
+it 0/50, Jtr = 0.000348, time: 00:24:37
+    Jdev = 0.000558
+
+it 1/50, Jtr = 0.000348, time: 00:24:33
+    Jdev = 0.000558
+
+it 2/50, Jtr = 0.000347, time: 00:24:33
+    Jdev = 0.000559
+
+it 3/50, Jtr = 0.000347, time: 00:24:33
+    Jdev = 0.000558
+
+it 4/50, Jtr = 0.000347, time: 00:24:38
+    Jdev = 0.000559
+
+it 5/50, Jtr = 0.000347, time: 00:24:38
+    Jdev = 0.000559
+
+it 6/50, Jtr = 0.000347, time: 00:24:39
+    Jdev = 0.000559
+
+it 7/50, Jtr = 0.000347, time: 00:24:39
+    Jdev = 0.000561
+
+it 8/50, Jtr = 0.000347, time: 00:24:39
+    Jdev = 0.000558
+
+it 9/50, Jtr = 0.000347, time: 00:24:42
+    Jdev = 0.000559
+
+it 10/50, Jtr = 0.000347, time: 00:24:39
+    Jdev = 0.000559
+
+it 11/50, Jtr = 0.000347, time: 00:24:39
+    Jdev = 0.000559
+
+it 12/50, Jtr = 0.000347, time: 00:24:38
+    Jdev = 0.000559
+
+it 13/50, Jtr = 0.000346, time: 00:24:38
+    Jdev = 0.000559
+
+it 14/50, Jtr = 0.000347, time: 00:24:39
+    Jdev = 0.000560
+
+it 15/50, Jtr = 0.000347, time: 00:24:38
+    Jdev = 0.000560
+
+it 16/50, Jtr = 0.000348, time: 00:24:39
+    Jdev = 0.000563
+
+it 17/50, Jtr = 0.000348, time: 00:24:32
+    Jdev = 0.000558
+
+it 18/50, Jtr = 0.000347, time: 00:24:37
+    Jdev = 0.000559
+
+it 19/50, Jtr = 0.000347, time: 00:24:34
+    Jdev = 0.000559
+
+it 20/50, Jtr = 0.000346, time: 00:24:33
+    Jdev = 0.000559
+
+it 21/50, Jtr = 0.000347, time: 00:24:43
+    Jdev = 0.000559
+
+it 22/50, Jtr = 0.000347, time: 00:24:39
+    Jdev = 0.000560
+
+it 23/50, Jtr = 0.000346, time: 00:24:33
+    Jdev = 0.000560
+
+it 24/50, Jtr = 0.000346, time: 00:24:33
+    Jdev = 0.000560
+
+it 25/50, Jtr = 0.000346, time: 00:24:31
+    Jdev = 0.000560
+
+it 26/50, Jtr = 0.000346, time: 00:24:33
+    Jdev = 0.000560
+
+it 27/50, Jtr = 0.000346, time: 00:24:33
+    Jdev = 0.000559
+
+it 28/50, Jtr = 0.000347, time: 00:24:32
+    Jdev = 0.000562
+
+it 29/50, Jtr = 0.000348, time: 00:24:34
+    Jdev = 0.000559
+
+it 30/50, Jtr = 0.000345, time: 00:24:42
+    Jdev = 0.000559
+
+it 31/50, Jtr = 0.000345, time: 00:24:42
+    Jdev = 0.000558
+
+it 32/50, Jtr = 0.000345, time: 00:24:44
+    Jdev = 0.000558
+
+it 33/50, Jtr = 0.000345, time: 00:24:43
+    Jdev = 0.000558
+
+it 34/50, Jtr = 0.000345, time: 00:24:43
+    Jdev = 0.000557
+
+it 35/50, Jtr = 0.000345, time: 00:24:43
+    Jdev = 0.000557
+
+it 36/50, Jtr = 0.000345, time: 00:24:43
+    Jdev = 0.000557
+
+it 37/50, Jtr = 0.000345, time: 00:24:43
+    Jdev = 0.000557
+
+it 38/50, Jtr = 0.000345, time: 00:24:39
+    Jdev = 0.000557
+
+it 39/50, Jtr = 0.000345, time: 00:24:30
+    Jdev = 0.000556
+
+it 40/50, Jtr = 0.000345, time: 00:24:37
+    Jdev = 0.000556
+
+it 41/50, Jtr = 0.000345, time: 00:24:39
+    Jdev = 0.000556
+
+it 42/50, Jtr = 0.000345, time: 00:24:35
+    Jdev = 0.000556
+
+it 43/50, Jtr = 0.000345, time: 00:24:33
+    Jdev = 0.000556
+
+it 44/50, Jtr = 0.000345, time: 00:24:39
+    Jdev = 0.000556
+
+it 45/50, Jtr = 0.000345, time: 00:24:39
+    Jdev = 0.000556
+
+it 46/50, Jtr = 0.000345, time: 00:24:39
+    Jdev = 0.000555
+
+it 47/50, Jtr = 0.000345, time: 00:24:38
+    Jdev = 0.000556
+
+it 48/50, Jtr = 0.000345, time: 00:24:42
+    Jdev = 0.000555
+
+it 49/50, Jtr = 0.000345, time: 00:24:37
+    Jdev = 0.000555
+
