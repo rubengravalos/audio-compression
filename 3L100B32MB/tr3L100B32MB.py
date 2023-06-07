@@ -11,7 +11,7 @@ import torch.nn as nn
 import matplotlib
 matplotlib.use('Agg')
 import torch
-"""
+
 import random
 import time
 import matplotlib.pyplot as plt
@@ -94,6 +94,7 @@ x_manipulate = dec(x)
 # Train, Dev split
 # --------------------------
 
+print(type(x))
 x = x.reshape(N, T, input_dim)
 
 if seed != None:
@@ -143,7 +144,7 @@ class Net(nn.Module):
         x = self.fc(x)
         return x.softmax(-1), state
 
-"""
+
 model = Net(input_dim, hidden_dim, output_dim, nb_lstm_layers)
 model.cuda()
 nb_param = sum(p.numel() for p in model.parameters())

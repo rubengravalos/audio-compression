@@ -205,12 +205,12 @@ class CodDecod(object):
         w = [int(self.x_true[0, t])]
         u = huffman_encode(w, d)
         message_encoded.append(u)
-        """
+        
         dict_len= {key: len(value) for key, value in d.items()}
         sorted_key_list = sorted(dict_len.items(), key=operator.itemgetter(1), reverse=False)
         sorted_dict = [{item[0]: d[item [0]]} for item in sorted_key_list]
         
-        if t in range(0,len(self.x_true[0]),100):
+        if t in range(0,10):
             print('----------------------------------')
             print('t: %d, x_correct: %f, highest prob: %f:' % (t, self.x_true[0, t], p.argmax(2)))
             print(sorted_dict[:5])
@@ -218,7 +218,7 @@ class CodDecod(object):
             print('palabra codificado: ',u)
             #print("x_t: ", x_t)
             print('----------------------------------')
-        """
+        
     
     message_encoded = [item for sublist in message_encoded for item in sublist]
     return message_encoded
@@ -286,7 +286,7 @@ class CodDecod(object):
     """
     return compression_rate
 
-x_true = torch.FloatTensor( x_test[:10] )
+x_true = torch.FloatTensor( x_test[0, :5] )
 
 """plt.plot(x_true[:1,:,:1])
 plt.title("Test signal shape")
